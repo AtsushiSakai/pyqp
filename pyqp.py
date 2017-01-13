@@ -12,6 +12,23 @@ def solve_qp_with_ep_const(P, q, A, b):
           min 0.5*x*P*x + q.T*x
           s.t Ax = b
     """
+    # input check
+    if not isinstance(P, np.matrix):
+        raise TypeError("'P' must be a np.matrix")
+    if not isinstance(q, np.matrix):
+        raise TypeError("'q' must be a np.matrix")
+    if not isinstance(A, np.matrix):
+        raise TypeError("'A' must be a np.matrix")
+    if not isinstance(b, np.matrix):
+        raise TypeError("'b' must be a np.matrix")
+
+    if P.shape[0] != P.shape[1]:
+        raise ValueError("'P' must be a square matrix")
+    if P.shape[1] != q.shape[1]:
+        raise ValueError("'P' or 'q' is invalid matrix size")
+    if A.shape[0] != b.shape[1]:
+        raise ValueError("'A' or 'b' is invalid matrix size")
+
     K1 = np.concatenate((P, A.T), axis=1)
     K2 = np.concatenate((A, np.zeros((A.shape[0], A.shape[0]))), axis=1)
     K = np.concatenate((K1, K2), axis=0)
@@ -48,6 +65,7 @@ def test_solve_qp_with_ep_const():
 
 def test():
     test_solve_qp_with_ep_const()
+
 
 if __name__ == '__main__':
     test()
