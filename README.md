@@ -1,5 +1,6 @@
 # pyqp
 [![Build Status](https://travis-ci.org/AtsushiSakai/pyqp.svg?branch=master)](https://travis-ci.org/AtsushiSakai/pyqp)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 Simple convex quadratic programming solver
 
@@ -16,7 +17,7 @@ Download this repository and import pyqp.py
 
 ## Usage
 
-See the test code in pycubicspline.py.
+See the test code in pyqp.py.
 
 ## Requirement
 
