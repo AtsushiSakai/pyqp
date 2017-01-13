@@ -1,4 +1,6 @@
 # pyqp
+[![Build Status](https://travis-ci.org/AtsushiSakai/pyqp.svg?branch=master)](https://travis-ci.org/AtsushiSakai/pyqp)
+
 Simple convex quadratic programming solver
 
 ## Description
