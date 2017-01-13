@@ -17,7 +17,7 @@ Download this repository and import pyqp.py
 
 ## Usage
 
-## solve_qp_with_ep_const
+### solve_qp_with_ep_const
 
 ![1](https://github.com/AtsushiSakai/pyqp/blob/master/images/1.png)
 
@@ -32,6 +32,8 @@ A = np.matrix([1.0, 1.0])
 x = solve_qp_with_ep_const(P, q, A, b)
 print(x)
 ```
+
+### others
 
 See the test code in pyqp.py.
 
